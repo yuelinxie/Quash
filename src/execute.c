@@ -161,7 +161,7 @@ void run_cd(CDCommand cmd) {
   else
   {
     char* oldpwd = getcwd(NULL, 1024);
-  }
+  
   // TODO: Change directory
   chdir(dir);
   // TODO: Update the PWD environment variable to be the new current working
@@ -171,6 +171,7 @@ void run_cd(CDCommand cmd) {
   setenv("PWD", dir, 1);
   setenv("OLDPWD", oldpwd, 1);
   free(oldpwd);
+  }
 }
 
 // Sends a signal to all processes contained in a job
