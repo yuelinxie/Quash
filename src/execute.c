@@ -10,8 +10,12 @@
 #include "execute.h"
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 
 #include "quash.h"
+#include "deque.h"
 
 // Remove this and all expansion calls to it
 /**
@@ -42,7 +46,7 @@ const char* lookup_env(const char* env_var) {
   // to interpret variables from the command line and display the prompt
   // correctly
   // HINT: This should be pretty simple
-  IMPLEMENT_ME();
+  //IMPLEMENT_ME();
 
   // TODO: Remove warning silencers
   // (void) env_var; // Silence unused variable warning
@@ -93,11 +97,11 @@ void run_generic(GenericCommand cmd) {
   char** args = cmd.args;
 
   // TODO: Remove warning silencers
-  (void) exec; // Silence unused variable warning
-  (void) args; // Silence unused variable warning
+  // (void) exec; // Silence unused variable warning
+  // (void) args; // Silence unused variable warning
   // TODO: Implement run generic
   execvp(exec, args);
-  IMPLEMENT_ME();
+  // IMPLEMENT_ME();
 
   perror("ERROR: Failed to execute program");
 }
@@ -109,8 +113,14 @@ void run_echo(EchoCommand cmd) {
   char** str = cmd.args;
 
   // TODO: Remove warning silencers
-  (void) str; // Silence unused variable warning
-
+  // (void) str; // Silence unused variable warning
+  int i = 0;
+  while(NULL != str[i])
+  {
+    printf("%s", str[i]);
+    i++;
+  }
+  printf("\n");
   // TODO: Implement echo
   IMPLEMENT_ME();
 
@@ -125,12 +135,13 @@ void run_export(ExportCommand cmd) {
   const char* val = cmd.val;
 
   // TODO: Remove warning silencers
-  (void) env_var; // Silence unused variable warning
-  (void) val;     // Silence unused variable warning
+  // (void) env_var; // Silence unused variable warning
+  // (void) val;     // Silence unused variable warning
 
   // TODO: Implement export.
   // HINT: This should be quite simple.
-  IMPLEMENT_ME();
+  // IMPLEMENT_ME();
+  setenv(env_var, val, 1);
 }
 
 // Changes the current working directory
@@ -143,13 +154,23 @@ void run_cd(CDCommand cmd) {
     perror("ERROR: Failed to resolve path");
     return;
   }
-
+  else if(!strcmp(dir," "))
+  {
+    chdir(getenv("HOME"));
+  }
+  else
+  {
+    char* oldpwd = getcwd(NULL, 1024);
+  }
   // TODO: Change directory
-
+  chdir(dir);
   // TODO: Update the PWD environment variable to be the new current working
   // directory and optionally update OLD_PWD environment variable to be the old
   // working directory.
-  IMPLEMENT_ME();
+  // IMPLEMENT_ME();
+  setenv("PWD", dir, 1);
+  setenv("OLDPWD", oldpwd, 1);
+  free(oldpwd);
 }
 
 // Sends a signal to all processes contained in a job
