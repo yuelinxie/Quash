@@ -1,0 +1,129 @@
+==23665== Memcheck, a memory error detector
+==23665== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23665== Using Valgrind-3.17.0 and LibVEX; rerun with -h for copyright info
+==23665== Command: /home/satazero/Desktop/EECS678/quash/quash
+==23665== 
+IMPLEMENT ME: src/execute.c(line 67): check_jobs_bg_status()
+IMPLEMENT ME: src/execute.c(line 67): check_jobs_bg_status()
+IMPLEMENT ME: src/execute.c(line 67): check_jobs_bg_status()
+IMPLEMENT ME: src/execute.c(line 67): check_jobs_bg_status()
+IMPLEMENT ME: src/execute.c(line 67): check_jobs_bg_status()
+==24270== Invalid read of size 4
+==24270==    at 0x48EE424: fileno (fileno.c:35)
+==24270==    by 0x10D242: create_process (execute.c:346)
+==24270==    by 0x10D51E: run_script (execute.c:401)
+==24270==    by 0x10A938: main (quash.c:121)
+==24270==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==24270== 
+==24270== 
+==24270== Process terminating with default action of signal 11 (SIGSEGV)
+==24270==  Access not within mapped region at address 0x0
+==24270==    at 0x48EE424: fileno (fileno.c:35)
+==24270==    by 0x10D242: create_process (execute.c:346)
+==24270==    by 0x10D51E: run_script (execute.c:401)
+==24270==    by 0x10A938: main (quash.c:121)
+==24270==  If you believe this happened as a result of a stack
+==24270==  overflow in your program's main thread (unlikely but
+==24270==  possible), you can try to increase the size of the
+==24270==  main thread stack using the --main-stacksize= flag.
+==24270==  The main thread stack size used in this run was 8388608.
+==24225== 
+==24225== HEAP SUMMARY:
+==24225==     in use at exit: 52 bytes in 2 blocks
+==24225==   total heap usage: 9 allocs, 7 frees, 21,950 bytes allocated
+==24225== 
+==24225== LEAK SUMMARY:
+==24225==    definitely lost: 0 bytes in 0 blocks
+==24225==    indirectly lost: 0 bytes in 0 blocks
+==24225==      possibly lost: 0 bytes in 0 blocks
+==24225==    still reachable: 52 bytes in 2 blocks
+==24225==         suppressed: 0 bytes in 0 blocks
+==24225== Reachable blocks (those to which a pointer was found) are not shown.
+==24225== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==24225== 
+==24225== For lists of detected and suppressed errors, rerun with: -s
+==24225== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+cat: '': No such file or directory
+==24277== Invalid read of size 4
+==24277==    at 0x48EE424: fileno (fileno.c:35)
+==24277==    by 0x10D205: create_process (execute.c:342)
+==24277==    by 0x10D51E: run_script (execute.c:401)
+==24277==    by 0x10A938: main (quash.c:121)
+==24277==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==24277== 
+==24277== 
+==24277== Process terminating with default action of signal 11 (SIGSEGV)
+==24277==  Access not within mapped region at address 0x0
+==24277==    at 0x48EE424: fileno (fileno.c:35)
+==24277==    by 0x10D205: create_process (execute.c:342)
+==24277==    by 0x10D51E: run_script (execute.c:401)
+==24277==    by 0x10A938: main (quash.c:121)
+==24277==  If you believe this happened as a result of a stack
+==24277==  overflow in your program's main thread (unlikely but
+==24277==  possible), you can try to increase the size of the
+==24277==  main thread stack using the --main-stacksize= flag.
+==24277==  The main thread stack size used in this run was 8388608.
+==24239== 
+==24239== HEAP SUMMARY:
+==24239==     in use at exit: 52 bytes in 2 blocks
+==24239==   total heap usage: 13 allocs, 11 frees, 23,298 bytes allocated
+==24239== 
+==24239== LEAK SUMMARY:
+==24239==    definitely lost: 0 bytes in 0 blocks
+==24239==    indirectly lost: 0 bytes in 0 blocks
+==24239==      possibly lost: 0 bytes in 0 blocks
+==24239==    still reachable: 52 bytes in 2 blocks
+==24239==         suppressed: 0 bytes in 0 blocks
+==24239== Reachable blocks (those to which a pointer was found) are not shown.
+==24239== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==24239== 
+==24239== For lists of detected and suppressed errors, rerun with: -s
+==24239== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==24270== 
+==24270== HEAP SUMMARY:
+==24270==     in use at exit: 21,870 bytes in 8 blocks
+==24270==   total heap usage: 20 allocs, 12 frees, 25,150 bytes allocated
+==24270== 
+==24270== LEAK SUMMARY:
+==24270==    definitely lost: 0 bytes in 0 blocks
+==24270==    indirectly lost: 0 bytes in 0 blocks
+==24270==      possibly lost: 0 bytes in 0 blocks
+==24270==    still reachable: 21,870 bytes in 8 blocks
+==24270==         suppressed: 0 bytes in 0 blocks
+==24270== Reachable blocks (those to which a pointer was found) are not shown.
+==24270== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==24270== 
+==24270== For lists of detected and suppressed errors, rerun with: -s
+==24270== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==24277== 
+==24277== HEAP SUMMARY:
+==24277==     in use at exit: 21,870 bytes in 8 blocks
+==24277==   total heap usage: 26 allocs, 18 frees, 26,530 bytes allocated
+==24277== 
+==24277== LEAK SUMMARY:
+==24277==    definitely lost: 0 bytes in 0 blocks
+==24277==    indirectly lost: 0 bytes in 0 blocks
+==24277==      possibly lost: 0 bytes in 0 blocks
+==24277==    still reachable: 21,870 bytes in 8 blocks
+==24277==         suppressed: 0 bytes in 0 blocks
+==24277== Reachable blocks (those to which a pointer was found) are not shown.
+==24277== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==24277== 
+==24277== For lists of detected and suppressed errors, rerun with: -s
+==24277== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==23665== 
+==23665== HEAP SUMMARY:
+==23665==     in use at exit: 48 bytes in 1 blocks
+==23665==   total heap usage: 30 allocs, 29 frees, 27,422 bytes allocated
+==23665== 
+==23665== LEAK SUMMARY:
+==23665==    definitely lost: 0 bytes in 0 blocks
+==23665==    indirectly lost: 0 bytes in 0 blocks
+==23665==      possibly lost: 0 bytes in 0 blocks
+==23665==    still reachable: 48 bytes in 1 blocks
+==23665==         suppressed: 0 bytes in 0 blocks
+==23665== Reachable blocks (those to which a pointer was found) are not shown.
+==23665== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==23665== 
+==23665== For lists of detected and suppressed errors, rerun with: -s
+==23665== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

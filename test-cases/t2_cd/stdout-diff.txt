@@ -1,0 +1,14 @@
+1,5c1,2
+< /home/satazero/Desktop/EECS678/quash/test-cases/t2_cd/sandbox
+< dir1
+< dir2
+< dir3
+< lorem_ipsum.txt
+---
+> dir3-1
+> dir3-2
+7c4,5
+< /home/satazero/Desktop/EECS678/quash/test-cases/t2_cd/sandbox 
+---
+> /home/satazero/Desktop/EECS678/quash/test-cases/t2_cd/sandbox/dir3
+> /home/satazero/Desktop/EECS678/quash/test-cases/t2_cd/sandbox/dir3
