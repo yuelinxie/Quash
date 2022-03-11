@@ -1,2 +1,2 @@
 0a1
-> /Users/xieyuelin/Desktop/quash/test-cases/t1_pwd/sandbox
+> /home/satazero/Desktop/EECS678/Quash/test-cases/t1_pwd/sandbox
