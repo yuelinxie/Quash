@@ -180,8 +180,8 @@ void run_kill(KillCommand cmd) {
   int job_id = cmd.job;
 
   // TODO: Remove warning silencers
-  (void) signal; // Silence unused variable warning
-  (void) job_id; // Silence unused variable warning
+  // (void) signal; // Silence unused variable warning
+  // (void) job_id; // Silence unused variable warning
 
   // TODO: Kill all processes associated with a background job
   IMPLEMENT_ME();
@@ -322,11 +322,11 @@ void create_process(CommandHolder holder) {
                                                // is true
 
   // TODO: Remove warning silencers
-  (void) p_in;  // Silence unused variable warning
-  (void) p_out; // Silence unused variable warning
-  (void) r_in;  // Silence unused variable warning
-  (void) r_out; // Silence unused variable warning
-  (void) r_app; // Silence unused variable warning
+  // (void) p_in;  // Silence unused variable warning
+  // (void) p_out; // Silence unused variable warning
+  // (void) r_in;  // Silence unused variable warning
+  // (void) r_out; // Silence unused variable warning
+  // (void) r_app; // Silence unused variable warning
 
   // TODO: Setup pipes, redirects, and new process
   IMPLEMENT_ME();
