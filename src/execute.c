@@ -41,7 +41,7 @@ IMPLEMENT_DEQUE(job_queue, struct Job);
 
 job_queue jobs;
 
-static bool instatiateJobQueue = true;
+static bool jobQueueExist = true;
 
 //Pipe globals
 static int pipes[2][2];
@@ -213,6 +213,7 @@ void run_kill(KillCommand cmd) {
 
   // TODO: Kill all processes associated with a background job
   // IMPLEMENT_ME();
+
 }
 
 
@@ -428,9 +429,9 @@ void create_process(CommandHolder holder, Job *job) {
 
 // Run a list of commands
 void run_script(CommandHolder* holders) {
-  if(instatiateJobQueue){
+  if(jobQueueExist){
 		jobs = new_job_queue(1);
-		instatiateJobQueue = false;
+		jobQueueExist = false;
 	}
 
   if (holders == NULL)
