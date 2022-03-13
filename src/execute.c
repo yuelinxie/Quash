@@ -72,7 +72,7 @@ const char* lookup_env(const char* env_var) {
   // HINT: This should be pretty simple
   //IMPLEMENT_ME();
 
-  // TODO: Remove warning silencers
+  // Remove warning silencers
   // (void) env_var; // Silence unused variable warning
 
   return getenv(env_var);
@@ -85,8 +85,12 @@ void check_jobs_bg_status() {
   // processes belonging to a job have completed.
   // IMPLEMENT_ME();
 
+  int job_id = 1;
+  pid_t pid = 1;
+  char * cmd = "Hello World!"; 
+
   // TODO: Once jobs are implemented, uncomment and fill the following line
-  // print_job_bg_complete(job_id, pid, cmd);
+  //print_job_bg_complete(job_id, pid, cmd);
 }
 
 // Prints the job id number, the process id of the first process belonging to

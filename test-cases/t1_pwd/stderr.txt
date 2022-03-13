@@ -1,1 +1,54 @@
-./run_tests.bash: line 280: valgrind: command not found
+==8688== Memcheck, a memory error detector
+==8688== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==8688== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==8688== Command: /home/a481g902/Quash/quash
+==8688== 
+==9121== 
+==9121== HEAP SUMMARY:
+==9121==     in use at exit: 1,076 bytes in 3 blocks
+==9121==   total heap usage: 11 allocs, 8 frees, 35,262 bytes allocated
+==9121== 
+==9121== 1,024 bytes in 1 blocks are definitely lost in loss record 3 of 3
+==9121==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9121==    by 0x10BAF3: get_current_directory (execute.c:60)
+==9121==    by 0x10BE06: run_pwd (execute.c:223)
+==9121==    by 0x10BEEC: child_run_command (execute.c:269)
+==9121==    by 0x10C1DE: create_process (execute.c:404)
+==9121==    by 0x10C430: run_script (execute.c:453)
+==9121==    by 0x1099A0: main (quash.c:121)
+==9121== 
+==9121== LEAK SUMMARY:
+==9121==    definitely lost: 1,024 bytes in 1 blocks
+==9121==    indirectly lost: 0 bytes in 0 blocks
+==9121==      possibly lost: 0 bytes in 0 blocks
+==9121==    still reachable: 52 bytes in 2 blocks
+==9121==         suppressed: 0 bytes in 0 blocks
+==9121== Reachable blocks (those to which a pointer was found) are not shown.
+==9121== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==9121== 
+==9121== For counts of detected and suppressed errors, rerun with: -v
+==9121== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==8688== 
+==8688== HEAP SUMMARY:
+==8688==     in use at exit: 56 bytes in 2 blocks
+==8688==   total heap usage: 10 allocs, 8 frees, 26,054 bytes allocated
+==8688== 
+==8688== 8 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==8688==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8688==    by 0x10A3CF: __on_push_pid_queue (execute.c:31)
+==8688==    by 0x10A53F: push_front_pid_queue (execute.c:31)
+==8688==    by 0x10C28F: create_process (execute.c:420)
+==8688==    by 0x10C430: run_script (execute.c:453)
+==8688==    by 0x1099A0: main (quash.c:121)
+==8688== 
+==8688== LEAK SUMMARY:
+==8688==    definitely lost: 8 bytes in 1 blocks
+==8688==    indirectly lost: 0 bytes in 0 blocks
+==8688==      possibly lost: 0 bytes in 0 blocks
+==8688==    still reachable: 48 bytes in 1 blocks
+==8688==         suppressed: 0 bytes in 0 blocks
+==8688== Reachable blocks (those to which a pointer was found) are not shown.
+==8688== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==8688== 
+==8688== For counts of detected and suppressed errors, rerun with: -v
+==8688== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

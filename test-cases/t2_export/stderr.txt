@@ -1,1 +1,160 @@
-./run_tests.bash: line 280: valgrind: command not found
+==8857== Memcheck, a memory error detector
+==8857== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==8857== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==8857== Command: /home/a481g902/Quash/quash
+==8857== 
+==9168== 
+==9168== HEAP SUMMARY:
+==9168==     in use at exit: 1,076 bytes in 3 blocks
+==9168==   total heap usage: 11 allocs, 8 frees, 35,262 bytes allocated
+==9168== 
+==9168== 1,024 bytes in 1 blocks are definitely lost in loss record 3 of 3
+==9168==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9168==    by 0x10BAF3: get_current_directory (execute.c:60)
+==9168==    by 0x10BE06: run_pwd (execute.c:223)
+==9168==    by 0x10BEEC: child_run_command (execute.c:269)
+==9168==    by 0x10C1DE: create_process (execute.c:404)
+==9168==    by 0x10C430: run_script (execute.c:453)
+==9168==    by 0x1099A0: main (quash.c:121)
+==9168== 
+==9168== LEAK SUMMARY:
+==9168==    definitely lost: 1,024 bytes in 1 blocks
+==9168==    indirectly lost: 0 bytes in 0 blocks
+==9168==      possibly lost: 0 bytes in 0 blocks
+==9168==    still reachable: 52 bytes in 2 blocks
+==9168==         suppressed: 0 bytes in 0 blocks
+==9168== Reachable blocks (those to which a pointer was found) are not shown.
+==9168== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==9168== 
+==9168== For counts of detected and suppressed errors, rerun with: -v
+==9168== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==9176== 
+==9176== HEAP SUMMARY:
+==9176==     in use at exit: 60 bytes in 3 blocks
+==9176==   total heap usage: 15 allocs, 12 frees, 27,418 bytes allocated
+==9176== 
+==9176== 8 bytes in 1 blocks are definitely lost in loss record 2 of 3
+==9176==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9176==    by 0x10A3CF: __on_push_pid_queue (execute.c:31)
+==9176==    by 0x10A53F: push_front_pid_queue (execute.c:31)
+==9176==    by 0x10C28F: create_process (execute.c:420)
+==9176==    by 0x10C430: run_script (execute.c:453)
+==9176==    by 0x1099A0: main (quash.c:121)
+==9176== 
+==9176== LEAK SUMMARY:
+==9176==    definitely lost: 8 bytes in 1 blocks
+==9176==    indirectly lost: 0 bytes in 0 blocks
+==9176==      possibly lost: 0 bytes in 0 blocks
+==9176==    still reachable: 52 bytes in 2 blocks
+==9176==         suppressed: 0 bytes in 0 blocks
+==9176== Reachable blocks (those to which a pointer was found) are not shown.
+==9176== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==9176== 
+==9176== For counts of detected and suppressed errors, rerun with: -v
+==9176== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==9191== 
+==9191== HEAP SUMMARY:
+==9191==     in use at exit: 1,092 bytes in 5 blocks
+==9191==   total heap usage: 24 allocs, 19 frees, 38,033 bytes allocated
+==9191== 
+==9191== 16 bytes in 2 blocks are definitely lost in loss record 2 of 4
+==9191==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9191==    by 0x10A3CF: __on_push_pid_queue (execute.c:31)
+==9191==    by 0x10A53F: push_front_pid_queue (execute.c:31)
+==9191==    by 0x10C28F: create_process (execute.c:420)
+==9191==    by 0x10C430: run_script (execute.c:453)
+==9191==    by 0x1099A0: main (quash.c:121)
+==9191== 
+==9191== 1,024 bytes in 1 blocks are definitely lost in loss record 4 of 4
+==9191==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9191==    by 0x10BAF3: get_current_directory (execute.c:60)
+==9191==    by 0x10BE06: run_pwd (execute.c:223)
+==9191==    by 0x10BEEC: child_run_command (execute.c:269)
+==9191==    by 0x10C1DE: create_process (execute.c:404)
+==9191==    by 0x10C430: run_script (execute.c:453)
+==9191==    by 0x1099A0: main (quash.c:121)
+==9191== 
+==9191== LEAK SUMMARY:
+==9191==    definitely lost: 1,040 bytes in 3 blocks
+==9191==    indirectly lost: 0 bytes in 0 blocks
+==9191==      possibly lost: 0 bytes in 0 blocks
+==9191==    still reachable: 52 bytes in 2 blocks
+==9191==         suppressed: 0 bytes in 0 blocks
+==9191== Reachable blocks (those to which a pointer was found) are not shown.
+==9191== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==9191== 
+==9191== For counts of detected and suppressed errors, rerun with: -v
+==9191== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==9205== 
+==9205== HEAP SUMMARY:
+==9205==     in use at exit: 76 bytes in 5 blocks
+==9205==   total heap usage: 27 allocs, 22 frees, 30,173 bytes allocated
+==9205== 
+==9205== 24 bytes in 3 blocks are definitely lost in loss record 2 of 3
+==9205==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9205==    by 0x10A3CF: __on_push_pid_queue (execute.c:31)
+==9205==    by 0x10A53F: push_front_pid_queue (execute.c:31)
+==9205==    by 0x10C28F: create_process (execute.c:420)
+==9205==    by 0x10C430: run_script (execute.c:453)
+==9205==    by 0x1099A0: main (quash.c:121)
+==9205== 
+==9205== LEAK SUMMARY:
+==9205==    definitely lost: 24 bytes in 3 blocks
+==9205==    indirectly lost: 0 bytes in 0 blocks
+==9205==      possibly lost: 0 bytes in 0 blocks
+==9205==    still reachable: 52 bytes in 2 blocks
+==9205==         suppressed: 0 bytes in 0 blocks
+==9205== Reachable blocks (those to which a pointer was found) are not shown.
+==9205== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==9205== 
+==9205== For counts of detected and suppressed errors, rerun with: -v
+==9205== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+ERROR: Failed to execute program: No such file or directory
+==9214== 
+==9214== HEAP SUMMARY:
+==9214==     in use at exit: 84 bytes in 6 blocks
+==9214==   total heap usage: 34 allocs, 28 frees, 31,560 bytes allocated
+==9214== 
+==9214== 32 bytes in 4 blocks are definitely lost in loss record 2 of 3
+==9214==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9214==    by 0x10A3CF: __on_push_pid_queue (execute.c:31)
+==9214==    by 0x10A53F: push_front_pid_queue (execute.c:31)
+==9214==    by 0x10C28F: create_process (execute.c:420)
+==9214==    by 0x10C430: run_script (execute.c:453)
+==9214==    by 0x1099A0: main (quash.c:121)
+==9214== 
+==9214== LEAK SUMMARY:
+==9214==    definitely lost: 32 bytes in 4 blocks
+==9214==    indirectly lost: 0 bytes in 0 blocks
+==9214==      possibly lost: 0 bytes in 0 blocks
+==9214==    still reachable: 52 bytes in 2 blocks
+==9214==         suppressed: 0 bytes in 0 blocks
+==9214== Reachable blocks (those to which a pointer was found) are not shown.
+==9214== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==9214== 
+==9214== For counts of detected and suppressed errors, rerun with: -v
+==9214== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==8857== 
+==8857== HEAP SUMMARY:
+==8857==     in use at exit: 88 bytes in 6 blocks
+==8857==   total heap usage: 35 allocs, 29 frees, 31,568 bytes allocated
+==8857== 
+==8857== 40 bytes in 5 blocks are definitely lost in loss record 1 of 2
+==8857==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8857==    by 0x10A3CF: __on_push_pid_queue (execute.c:31)
+==8857==    by 0x10A53F: push_front_pid_queue (execute.c:31)
+==8857==    by 0x10C28F: create_process (execute.c:420)
+==8857==    by 0x10C430: run_script (execute.c:453)
+==8857==    by 0x1099A0: main (quash.c:121)
+==8857== 
+==8857== LEAK SUMMARY:
+==8857==    definitely lost: 40 bytes in 5 blocks
+==8857==    indirectly lost: 0 bytes in 0 blocks
+==8857==      possibly lost: 0 bytes in 0 blocks
+==8857==    still reachable: 48 bytes in 1 blocks
+==8857==         suppressed: 0 bytes in 0 blocks
+==8857== Reachable blocks (those to which a pointer was found) are not shown.
+==8857== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==8857== 
+==8857== For counts of detected and suppressed errors, rerun with: -v
+==8857== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
