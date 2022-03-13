@@ -1,5 +1,5 @@
 dir3-1
 dir3-2
 valgrind_expected.txt
-2/.valgrind_expected.txt/sandbox/dir3
-2/.valgrind_expected.txt/sandbox/dir3
+/Users/xieyuelin/Desktop/Quash/test-cases/t2_cd/sandbox/dir3
+/Users/xieyuelin/Desktop/Quash/test-cases/t2_cd/sandbox/dir3
