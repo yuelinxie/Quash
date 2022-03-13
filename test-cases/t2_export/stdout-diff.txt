@@ -1,3 +1,0 @@
-0a1,2
-> /home/satazero/Desktop/EECS678/Quash/test-cases/t2_export/sandbox
-> /home/satazero/Desktop/EECS678/Quash/test-cases/t2_export/sandbox
